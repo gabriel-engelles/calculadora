@@ -32,6 +32,28 @@ main {
     border: 1px solid #000;
 }
 
+.display  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin-bottom: 1rem;
+    margin-right: 2px;
+}
+
+.on_clear {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1fr;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    margin-left: 0.8rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .keypad{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -41,9 +63,7 @@ main {
     gap: 1rem;
 }
 
-.n1, .n2, .n3, .n4, .n5, .n6, .n7, 
-.n8, .n9, .n0, .divi, .mult, 
-.sub, .add, .decimal, .equals{
+.display{
     display: flex;
     justify-content: center;
     align-items: center;
