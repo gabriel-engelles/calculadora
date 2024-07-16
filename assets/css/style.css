@@ -23,36 +23,30 @@ main {
 }
 
 .container {
-    padding: 1rem;
-    border: 1px solid #000;
-    width: 400px;
-    height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 400px;
+    height: 500px;
+    padding: 1rem;
+    border: 1px solid #000;
 }
 
-.numbers{
+.keypad{
     display: grid;
-    grid-column: 1/4;
-    grid-row: 2/6;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
-    gap: 1rem;
-}
-
-.arithmetic_operators {
-    display: grid;
-    grid-column: 4/5;
-    grid-row: 2/6;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column: 1/5;
+    grid-row: 2/6;
     gap: 1rem;
-    padding-left: 1rem;
 }
 
-.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9, .n0, .divi, .mult, .sub, .add{
-    padding: 1fr;
+.n1, .n2, .n3, .n4, .n5, .n6, .n7, 
+.n8, .n9, .n0, .divi, .mult, 
+.sub, .add, .decimal, .equals{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #000;
 }
 
