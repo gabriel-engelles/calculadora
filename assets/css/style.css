@@ -33,15 +33,25 @@ main {
 }
 
 .numbers{
-    grid-column: 1/4;
-    grid-row: 1/6;
     display: grid;
+    grid-column: 1/4;
+    grid-row: 2/6;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr; 
     gap: 1rem;
 }
 
-.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9, .n0{
+.arithmetic_operators {
+    display: grid;
+    grid-column: 4/5;
+    grid-row: 2/6;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9, .n0, .divi, .mult, .sub, .add{
     padding: 1fr;
     border: 1px solid #000;
 }
