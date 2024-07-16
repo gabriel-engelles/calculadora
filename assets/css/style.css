@@ -23,9 +23,27 @@ main {
 }
 
 .container {
+    padding: 1rem;
     border: 1px solid #000;
     width: 400px;
     height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.numbers{
+    grid-column: 1/4;
+    grid-row: 1/6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 1rem;
+}
+
+.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9, .n0{
+    padding: 1fr;
+    border: 1px solid #000;
 }
 
 footer {
