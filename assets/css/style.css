@@ -27,9 +27,12 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     width: 400px;
-    height: 500px;
-    padding: 1rem;
+    height: 520px;
+    padding: 0 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     border: 1px solid #000;
+    border-radius: 1rem;
 }
 
 .display  {
@@ -39,7 +42,11 @@ main {
     grid-column: 1/4;
     grid-row: 1/2;
     margin-bottom: 1rem;
-    margin-right: 2px;
+    margin-right: 4px;
+    align-items: center;
+    padding-left: 1rem;
+    border: 1px solid #000;
+    border-radius: 1rem;
 }
 
 .on_clear {
@@ -63,11 +70,8 @@ main {
     gap: 1rem;
 }
 
-.display{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000;
+button {
+    border-radius: 1rem;
 }
 
 footer {
