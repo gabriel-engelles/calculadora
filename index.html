@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <nav></nav>
-    </header>
-
     <main>
       <div class="container">
-        <div class="display">display</div>
-        <button class="on_clear">on/ce</button>
+        <div class="display">html_css</div>
+        <div class="on_clear">
+          <button id="btn_on">
+            <span class="on">ON</span>
+            <span class="line"></span>
+            <span class="ce">CE</span>
+          </button>
+        </div>
         <div class="keypad">
           <button class="n1">1</button>
           <button class="n2">2</button>
           <button class="n3">3</button>
-          <button class="divi">/</button>
+          <button class="divi">÷</button>
           <button class="n4">4</button>
           <button class="n5">5</button>
           <button class="n6">6</button>
-          <button class="mult">*</button>
+          <button class="mult">x</button>
           <button class="n7">7</button>
           <button class="n8">8</button>
           <button class="n9">9</button>
@@ -35,7 +43,5 @@
         </div>
       </div>
     </main>
-
-    <footer></footer>
   </body>
 </html>
