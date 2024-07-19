@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-noise-container: repeating-conic-gradient(
+        #408080,
+        #3a5151 0.001%,
+        #408080 0 0.001%
+      )
+      3000px 3000px,
+    repeating-conic-gradient(#408080 0 0.001%, #408080 0 0.002%) 0px;
+  background-blend-mode: multiply;
+
+  --background-noise: repeating-radial-gradient(
+        #9f9f9f,
+        #c7c7c7 0.001%,
+        #c3c3c3 0 0.002%
+      )
+      4000000px 40000px,
+    repeating-conic-gradient(#e1e1e1 0 0.001%, #c4c4c4 0 0.002%) 60000px;
+  background-blend-mode: difference;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(120deg, #ffff00, #f7f7f751 );
+  background-size: 1px 1px;
+}
+
+/* CONTAINER */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  width: 400px;
+  height: 520px;
+  padding: 0 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border: none;
+  border-radius: 1rem;
+  background: var(--background-noise-container);
+  box-shadow: inset 0px -1px 3px 4px rgba(0, 0, 0, 0.7),
+    1px 1px 1px -5px rgb(0, 0, 0);
+}
+
+/* DISPLAY */
+#display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column: 1/4;
+  grid-row: 1/2;
+  margin-bottom: 1rem;
+  margin-right: 4px;
+  align-items: center;
+  padding-left: 1rem;
+  border: 8px solid rgb(42, 41, 41);
+  border-radius: 0.3rem;
+  background-color: rgba(255, 191, 0, 0.8);
+  box-shadow: inset -1px 0px 7px 3px rgba(0, 0, 0, 0.8),
+    1px 0px 7px 1px rgba(9, 9, 9, 0.7);
+  font-family: "VT323", monospace;
+  font-size: 45px;
+  animation: display_on 1.5s infinite alternate;
+}
+
+@keyframes display_on {
+  0% {
+    color: rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 20px rgba(255, 191, 0, 1), 0 0 20px rgba(255, 191, 0, 0.5),
+      0 0 40px rgba(255, 191, 0, 0.6);
+  }
+  50% {
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 20px rgb(255, 230, 0), 0 0 70px rgba(255, 191, 0, 0.6),
+      0 0 40px rgba(255, 230, 0, 0.6);
+  }
+  100% {
+    color: rgb(18, 18, 18);
+    text-shadow: 0 0 30px rgba(255, 191, 0, 1), 0 0 40px rgba(255, 191, 0, 0.8),
+      0 0 60px rgba(255, 191, 0, 0.6);
+  }
+}
+
+/* BUTTON ON_CLEAR */
+.on_clear {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1fr;
+  grid-column: 4/5;
+  grid-row: 1/2;
+  margin-left: 0.8rem;
+  margin-bottom: 1rem;
+}
+.on_clear button {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  position: relative;
+  border: none;
+  background: var(--background-noise);
+  box-shadow: 1px 4px 9px -1px #3f1313, -1px -1px 8px #331010;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.4rem;
+  text-shadow: 0.3px 0.3px 1px rgba(9, 9, 9, 0.7),
+    -0.2px -0.2px 1px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  color: black;
+}
+.on_clear button #on {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  grid-row: 1/2;
+}
+.on_clear button #line {
+  grid-row: 2/3;
+  margin: 0 15px;
+  margin-top: 10px;
+  border: 1px solid #000;
+}
+.on_clear button #ce {
+  grid-row: 3/4;
+  margin-top: -10px;
+}
+.on_clear button::before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.6);
+  box-shadow: inset 0px -1px 2px 2px rgba(43, 15, 15, 0.7),
+    1px 1px 1px -2px rgb(45, 14, 14);
+  z-index: 0;
+}
+.on_clear button:active {
+  box-shadow: 1px 1px 2px #1e1e1e, -1px -1px 1px #474343;
+  transform: translateY(3px);
+  transition: ease-in-out;
+  transition: 70ms;
+}
+
+/* KEYPAD */
+.keypad {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-column: 1/5;
+  grid-row: 2/6;
+  gap: 1rem;
+}
+
+.keypad button {
+  position: relative;
+  border: none;
+  background: var(--background-noise);
+  box-shadow: 1px 4px 9px -1px #1e1e1e, -1px -1px 10px #2d2c2c;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  text-shadow: 0.3px 0.3px 1px rgba(9, 9, 9, 0.7),
+    -0.2px -0.2px 1px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  color: black;
+}
+
+.keypad button::before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0px -1px 2px 2px rgba(0, 0, 0, 0.7),
+    1px 1px 1px -2px rgb(0, 0, 0);
+  z-index: 0;
+}
+
+.keypad button:active {
+  box-shadow: 1px 1px 2px #1e1e1e, -1px -1px 1px #474343;
+  transform: translateY(3px);
+  transition: ease-in-out;
+  transition: 30ms;
+}
+
+.keypad #decimal {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-size: 3rem;
+}
+
+.keypad #mult {
+  font-size: 2.7rem;
+}
+
+.keypad #equals,
+.keypad #add,
+.keypad #sub,
+.keypad #divi {
+  font-size: 3rem;
+}
+
+.keypad #equals::before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.6);
+  box-shadow: inset 0px -1px 2px 2px rgba(43, 15, 15, 0.7),
+    1px 1px 1px -2px rgb(45, 14, 14);
+  z-index: 0;
+}
+
+.keypad #add::before,
+.keypad #sub::before,
+.keypad #mult::before,
+.keypad #divi::before {
+  content: "";
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(74, 74, 74, 0.5);
+  box-shadow: inset 0px -1px 2px 2px rgba(0, 0, 0, 0.7),
+    1px 1px 1px -2px rgb(0, 0, 0);
+  z-index: 0;
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    width: 340px;
+  }
+}
