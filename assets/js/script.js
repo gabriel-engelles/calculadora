@@ -80,15 +80,19 @@ function calcular() {
             resultado = (resultado === undefined) ? (isNaN(valorAnterior) ? 0 : valorAnterior) * valorAtual : Number(resultado) * valorAtual
             break;
         case "/":
-            resultado = (resultado === undefined) ? (isNaN(valorAnterior) ? 0 : valorAnterior) / valorAtual : Number(resultado) / valorAtual
+            if (valorAtual === 0) {
+                resultado = 0
+            } else {
+                resultado = (resultado === undefined) ? valorAnterior / valorAtual : Number(resultado) / valorAtual
+            }
             break;
     
         default:
             break;
     }
 
-    
-    resultado = resultado.toString()
+
+        resultado = resultado.toString()
 
     if (resultado.length > 13) {
         resultado = resultado.slice(0, 13)
