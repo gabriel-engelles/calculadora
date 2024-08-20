@@ -3,7 +3,7 @@
 ## Sobre o Projeto
 https://gabriel-engelles.github.io/calculadora/<br>
 <br>
-Este projeto é uma calculadora digital desenvolvida para praticar e demonstrar habilidades em HTML e CSS.<br> 
+Este projeto é uma calculadora digital desenvolvida para praticar e demonstrar habilidades em HTML, CSS e javaScript.<br> 
 ### Exemplo de Uso
 - **Adicionar Números:**
   -  Clique nos botões numéricos para adicionar números ao display.
