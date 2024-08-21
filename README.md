@@ -63,7 +63,8 @@ cd calculadora
 ### 3. Abra o arquivo index.html em seu navegador.
 
 ## Próximos Passos:
--  Adicionar verificação ao display para receber caracteres somente após "clicar" em "ON"
+-  Implementar verificação ao display para receber caracteres somente após "clicar" em "ON"
+-  implementar soma "automática" ao ficar clicando no operador
 
 # Autor
 Gabriel Engelles <br>
