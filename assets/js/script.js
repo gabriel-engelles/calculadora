@@ -14,7 +14,7 @@ oC.addEventListener('click', onClear)
 // Função chamada ao clicar em "Clear", resetando o display
 function onClear() {
     let display = addNumero()
-    if(display === "" || display >= 0 || display.indexOf(".") !== -1){
+    if(display === "" || display >= -999999999999 || display.indexOf(".") !== -1){
         document.querySelector('#display').value = 0
         operador = ""
         valorAnterior = undefined
