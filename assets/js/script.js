@@ -49,15 +49,18 @@ let resultado
 // Função para adicionar/alterar operador aritmético, adicionar valor ou zerar variaveis
 function opAritmetico(op) {
     if(valorAnterior === undefined){
-        valorAnterior = Number(document.querySelector('#display').value)
-        console.log("anterior: " + valorAnterior)
-    } else {
+        valorAnterior = Number(document.querySelector('#display').value)    
+    } else if (valorAtual === undefined){
+        operador = op
+        document.querySelector('#display').value = ""
+        return
+    } else{
         resultado = Number(document.querySelector('#display').value)
-        valorAtual = undefined
-        console.log("anterior(resultado): " + resultado)
+        valorAtual = undefined 
     }
     operador = op
     document.querySelector('#display').value = ""
+
 }
 
 // Função para calcular valores
@@ -99,9 +102,7 @@ function calcular() {
     }
     
     if (resultado.includes(".")) {
-        console.log(resultado)
-        resultado = parseFloat(resultado).toFixed(2)
-        console.log(resultado)
+        resultado = parseFloat(resultado).toFixed(2) 
     }
     document.querySelector('#display').value = resultado
 }
